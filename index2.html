@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <p id="current-time"></p>
+    <script>
+        function updateCurrentTime() {
+            const currentTimeElement = document.getElementById("current-time");
+            const currentTime = new Date();
+            currentTimeElement.textContent = "Поточний час: " + currentTime.toLocaleTimeString();
+        }
+
+        updateCurrentTime();
+
+        setInterval(function() {
+            updateCurrentTime();
+            alert("Оновлено час!");
+        }, 30000);
+    </script>
+</body>
+</html>
